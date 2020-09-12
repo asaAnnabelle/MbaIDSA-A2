@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assignment:Department
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:assignment="platform:/plugin/assignment1/model/assignment.ecore"
+    xsi:schemaLocation="platform:/plugin/assignment1/model/assignment.ecore assignment.ecore">
+  <course name="Infomasjonsgjennfinning"
+      code="TDT2992"
+      studylevel="3stlevel"/>
+  <course name="Avansert programvaredesign"
+      code="TDT4250"
+      studylevel="higher level"/>
+  <course name="Informasjonssystemer"
+      code="TDT3150"
+      studylevel="higher level"/>
+  <course name="Course 5"
+      code="TDT209209"/>
+  <programs
+      name="Datateknologi 2-årig"
+      lengthOfProgramInyears="2"
+      startyear="2015"
+      code="sdhfh33">
+    <specialisation
+        name="Programvareutvikling"
+        semester="//@programs.0/@semseters.0 //@programs.0/@semseters.1"
+        startyear="2015"/>
+    <specialisation
+        name="Databaser og søk"
+        semester="//@programs.0/@semseters.2"
+        startyear="2015"/>
+    <semseters
+        semesternr="1"
+        selectableCourse="//@course.1"
+        mandatoryCourse="//@course.2"
+        specialisation="//@programs.0/@specialisation.0"
+        startyear="2015"/>
+    <semseters
+        semesternr="2"
+        selectableCourse="//@course.0"
+        specialisation="//@programs.0/@specialisation.0"
+        startyear="2015"/>
+    <semseters
+        semesternr="1"
+        mandatoryCourse="//@course.0"
+        specialisation="//@programs.0/@specialisation.1"
+        startyear="2015"/>
+    <semseters
+        semesternr="3"
+        mandatoryCourse="//@course.3"
+        startyear="2017"/>
+  </programs>
+  <programs
+      name="Datateknologi 5-årig"
+      lengthOfProgramInyears="5"
+      startyear="2015"
+      code="sdjjfsjs2"/>
+</assignment:Department>

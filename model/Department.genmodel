@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/assignment1/src" modelPluginID="assignment1" modelName="Department"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>assignment.ecore</foreignModel>
+  <genPackages prefix="Assignment" disposableProviderFactory="true" ecorePackage="assignment.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="assignment.ecore#//Studylevel">
+      <genEnumLiterals ecoreEnumLiteral="assignment.ecore#//Studylevel/firstlevel"/>
+      <genEnumLiterals ecoreEnumLiteral="assignment.ecore#//Studylevel/secondlevel"/>
+      <genEnumLiterals ecoreEnumLiteral="assignment.ecore#//Studylevel/thirdstlevel"/>
+      <genEnumLiterals ecoreEnumLiteral="assignment.ecore#//Studylevel/higherlevel"/>
+    </genEnums>
+    <genClasses ecoreClass="assignment.ecore#//Course">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assignment.ecore#//Course/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assignment.ecore#//Course/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assignment.ecore#//Course/studylevel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assignment.ecore#//Course/credits"/>
+    </genClasses>
+    <genClasses ecoreClass="assignment.ecore#//Department">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assignment.ecore#//Department/course"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assignment.ecore#//Department/programs"/>
+    </genClasses>
+    <genClasses ecoreClass="assignment.ecore#//Program">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assignment.ecore#//Program/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assignment.ecore#//Program/specialisation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assignment.ecore#//Program/lengthOfProgramInyears"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assignment.ecore#//Program/semseters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assignment.ecore#//Program/startyear"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assignment.ecore#//Program/endyear"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assignment.ecore#//Program/code"/>
+    </genClasses>
+    <genClasses ecoreClass="assignment.ecore#//Semester">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assignment.ecore#//Semester/semesternr"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assignment.ecore#//Semester/selectableCourse"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assignment.ecore#//Semester/mandatoryCourse"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assignment.ecore#//Semester/specialisation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assignment.ecore#//Semester/startyear"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assignment.ecore#//Semester/endyear"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assignment.ecore#//Semester/program"/>
+    </genClasses>
+    <genClasses ecoreClass="assignment.ecore#//Specialisation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assignment.ecore#//Specialisation/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assignment.ecore#//Specialisation/program"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assignment.ecore#//Specialisation/semester"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assignment.ecore#//Specialisation/startyear"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assignment.ecore#//Specialisation/endyear"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
