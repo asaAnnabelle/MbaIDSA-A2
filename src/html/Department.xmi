@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assignment:Department
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:assignment="platform:/plugin/assignment1/model/assignment.ecore"
+    xsi:schemaLocation="platform:/plugin/assignment1/model/assignment.ecore ../../model/assignment.ecore">
+  <course name="Infomasjonsgjennfinning"
+      code="TDT2992"
+      studylevel="3stlevel"/>
+  <course name="Avansert programvaredesign"
+      code="TDT4250"
+      studylevel="higher level"/>
+  <course name="Informasjonssystemer"
+      code="TDT3150"
+      studylevel="higher level"/>
+  <course name="Course 5"
+      code="TDT209209"/>
+  <course name="ExtraCourse"
+      code="123Code"
+      studylevel="3stlevel"
+      credits="25.0"/>
+  <course name="Design av grafisk brukergrensesnitt"
+      code="IT3402"
+      studylevel="higher level"/>
+  <course name="Virksomhetsarkitektur oginnovasjon"
+      code="TDT4252"
+      studylevel="higher level"/>
+  <course name="Anvendt data sience"
+      code="TDT4259"
+      studylevel="higher level"/>
+  <course name="Informasjonsgenfinning"
+      code="TDT4117"
+      studylevel="3stlevel"/>
+  <course name="Introduksjon til kunstig inteligens"
+      code="TDT4136"
+      studylevel="3stlevel"/>
+  <course name="Deltagene design"
+      code="IT3022"
+      studylevel="higher level"/>
+  <course name="Programvaresikkerhet og personvern"
+      code="TDT4237"
+      studylevel="higher level"/>
+  <course name="Avansert programvareutvikling"
+      code="TDT4242"
+      studylevel="higher level"/>
+  <course name="Parallelle beregninger"
+      code="TDT4200"/>
+  <course name="Samhandlingsteknologi og sosiale medier"
+      code="TDT4245"
+      studylevel="higher level"/>
+  <course name="Digital tjenesteinnovasjon"
+      code="TDT4257"
+      studylevel="3stlevel"/>
+  <course name="Anbefalingssystemer"
+      code="TDT4215"
+      studylevel="3stlevel"/>
+  <programs
+      name="Datateknologi 2-årig"
+      lengthOfProgramInyears="2"
+      startyear="2015"
+      code="MIDT">
+    <specialisation
+        name="Programvareutvikling"
+        semester="//@programs.0/@semseters.0 //@programs.0/@semseters.1"
+        startyear="2015"/>
+    <specialisation
+        name="Databaser og søk"
+        semester="//@programs.0/@semseters.2"
+        startyear="2015"/>
+    <semseters
+        semesternr="1"
+        selectableCourse="//@course.1 //@course.5 //@course.0 //@course.7"
+        mandatoryCourse="//@course.2"
+        specialisation="//@programs.0/@specialisation.0"
+        startyear="2015"/>
+    <semseters
+        semesternr="2"
+        selectableCourse="//@course.0 //@course.2 //@course.5 //@course.8"
+        mandatoryCourse="//@course.16"
+        specialisation="//@programs.0/@specialisation.0"
+        startyear="2015"/>
+    <semseters
+        semesternr="1"
+        selectableCourse="//@course.13 //@course.7 //@course.5"
+        mandatoryCourse="//@course.0 //@course.9"
+        specialisation="//@programs.0/@specialisation.1"
+        startyear="2015"/>
+    <semseters
+        semesternr="1"
+        selectableCourse="//@course.11 //@course.12 //@course.15 //@course.16"
+        mandatoryCourse="//@course.1"
+        startyear="2017"/>
+    <semseters
+        semesternr="2"
+        selectableCourse="//@course.5 //@course.6 //@course.7 //@course.8"
+        mandatoryCourse="//@course.0"
+        startyear="2017"/>
+    <semseters
+        semesternr="1"
+        selectableCourse="//@course.1 //@course.5 //@course.6"
+        mandatoryCourse="//@course.10"
+        startyear="2016"
+        endyear="2017"/>
+    <semseters
+        semesternr="3"
+        selectableCourse="//@course.16 //@course.10"
+        mandatoryCourse="//@course.5 //@course.9 //@course.15"
+        startyear="2016"/>
+  </programs>
+  <programs
+      name="Datateknologi 5-årig"
+      lengthOfProgramInyears="5"
+      startyear="2015"
+      code="MTDT">
+    <semseters
+        semesternr="1"
+        selectableCourse="//@course.13 //@course.14 //@course.15 //@course.16"
+        startyear="2015"/>
+    <semseters
+        semesternr="2"
+        selectableCourse="//@course.14 //@course.15"
+        mandatoryCourse="//@course.10 //@course.11"
+        startyear="2015"/>
+    <semseters
+        semesternr="3"
+        mandatoryCourse="//@course.6 //@course.7 //@course.8 //@course.9"
+        startyear="2015"/>
+    <semseters
+        semesternr="4"
+        mandatoryCourse="//@course.0 //@course.1 //@course.2 //@course.5"
+        startyear="2015"/>
+  </programs>
+</assignment:Department>

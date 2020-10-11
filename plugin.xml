@@ -14,4 +14,11 @@
             genModel="model/Department.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated Department -->
+      <parser
+            type="assignment"
+            class="assignment.util.AssignmentResourceFactoryImpl"/>
+   </extension>
+
 </plugin>

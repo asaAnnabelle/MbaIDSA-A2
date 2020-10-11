@@ -16,6 +16,9 @@
       studylevel="higher level"/>
   <course name="Course 5"
       code="TDT209209"/>
+  <course name="ExtraCourse"
+      code="123Code"
+      credits="30.0"/>
   <programs
       name="Datateknologi 2-årig"
       lengthOfProgramInyears="2"
@@ -31,22 +34,24 @@
         startyear="2015"/>
     <semseters
         semesternr="1"
-        selectableCourse="//@course.1"
+        selectableCourse="//@course.1 //@course.4"
         mandatoryCourse="//@course.2"
         specialisation="//@programs.0/@specialisation.0"
         startyear="2015"/>
     <semseters
         semesternr="2"
-        selectableCourse="//@course.0"
+        selectableCourse="//@course.0 //@course.4"
         specialisation="//@programs.0/@specialisation.0"
         startyear="2015"/>
     <semseters
         semesternr="1"
+        selectableCourse="//@course.4"
         mandatoryCourse="//@course.0"
         specialisation="//@programs.0/@specialisation.1"
         startyear="2015"/>
     <semseters
         semesternr="3"
+        selectableCourse="//@course.4"
         mandatoryCourse="//@course.3"
         startyear="2017"/>
   </programs>

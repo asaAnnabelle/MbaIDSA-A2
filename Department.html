@@ -1,0 +1,671 @@
+<html>
+	<head>
+		<title>Department</title>
+		<meta http-equiv="content-type" content="text/html; charset="UTF-8"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	</head>
+	<body>
+	<div class="container">
+<script type="text/javascript">
+
+function checkYears(start, end, selected){
+	// parsing all the input to Integers.
+	let start_int = parseInt(start)
+	let end_int = parseInt(end)
+	let selected_int = parseInt(selected)
+	console.log("start " , start_int)
+	console.log("end ", end_int)
+	console.log("start and end stringz", start, end)
+	console.log("selected int :  ", selected)
+	if(end_int === 0){
+		console.log("inside end-int == 0")
+		if(selected_int >= start_int) return true;
+	}else{
+		console.log("endint is not 0")
+		if(selected_int >= start_int && selected_int < end_int) return true;
+	}
+	console.log("returning false! at ",start, end)
+	return false;
+	
+}
+
+function onClickyear(selected){
+	var divs = document.getElementsByClassName("semester");
+	// setting all semester to none, so they are removed. 
+	for (var i = 0; i < divs.length; i++) {
+		divs[i].style.display = 'none';
+	}
+	[].forEach(id => {
+		console.log(id.toString())
+		
+		const start = id.toString().slice(1,5) // here we are fetching the start year. 
+		const end = id.toString().slice(5); // here we are fetching the end year
+		
+		// an example of this is 20202021 where the start year is 2020 and end is 2021
+		// OBS! the end year might not exist!
+		const is_accepted = checkYears(start, end, selected.value) // checked if the year selected is in this id.
+		
+		// if the id from the idlist is accepted then we will show this id/semester.
+		if(is_accepted) document.getElementById(id.toString()).style.display = 'block';
+		
+	})
+	
+	
+}
+
+</script>
+<h1 id=2020></h1>
+<div class="row" style="text-align:center;">
+<h1>Datateknologi 2-årig</h1>
+<h1> MIDT</h1>
+</div>
+<div class="row">
+<h4 style="padding-right:20px;">Kull  </h4>
+
+<div>
+<select class="custom-select float-right" id="yearSelection"" onchange="onClickyear(this)"><option value="2016">2016 </option>
+<option value="2017">2017 </option>
+<option value="2018">2018 </option>
+<option value="2019">2019 </option>
+<option value="2020">2020 </option>
+</select>
+</div>
+</div>
+<div id="120170" class="semester">
+
+<div class="row">
+<h5 style="color:gray;padding-right:20px;">Høst </h5>
+<h5> Obligatoriske og valgbare emner - 1. semester</h5>
+</div>
+<table class="table table-striped table-responsive mb-8 mt-0">
+	<thead>
+		<tr>
+<th>Code</th><th>Navn</th><th>Credits</th><th>Studielevel</th><th>Status</th>	</tr>
+</thead>
+<tbody>
+<tr>
+<td style="color:blue;">TDT4250</td>
+<td>Avansert programvaredesign</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>mandatory course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4237</td>
+<td>Programvaresikkerhet og personvern</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4242</td>
+<td>Avansert programvareutvikling</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4257</td>
+<td>Digital tjenesteinnovasjon</td>
+<td>7.5</td>
+<td>3stlevel</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4215</td>
+<td>Anbefalingssystemer</td>
+<td>7.5</td>
+<td>3stlevel</td>
+<td>selectable course</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="220170" class="semester">
+
+<div class="row">
+<h5 style="color:gray;padding-right:20px;">Vår </h5>
+<h5> Obligatoriske og valgbare emner - 2. semester</h5>
+</div>
+<table class="table table-striped table-responsive mb-8 mt-0">
+	<thead>
+		<tr>
+<th>Code</th><th>Navn</th><th>Credits</th><th>Studielevel</th><th>Status</th>	</tr>
+</thead>
+<tbody>
+<tr>
+<td style="color:blue;">TDT2992</td>
+<td>Infomasjonsgjennfinning</td>
+<td>7.5</td>
+<td>3stlevel</td>
+<td>mandatory course</td>
+</tr>
+<tr>
+<td style="color:blue;">IT3402</td>
+<td>Design av grafisk brukergrensesnitt</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4252</td>
+<td>Virksomhetsarkitektur oginnovasjon</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4259</td>
+<td>Anvendt data sience</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4117</td>
+<td>Informasjonsgenfinning</td>
+<td>7.5</td>
+<td>3stlevel</td>
+<td>selectable course</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="120162017" class="semester">
+
+<div class="row">
+<h5 style="color:gray;padding-right:20px;">Høst </h5>
+<h5> Obligatoriske og valgbare emner - 1. semester</h5>
+</div>
+<table class="table table-striped table-responsive mb-8 mt-0">
+	<thead>
+		<tr>
+<th>Code</th><th>Navn</th><th>Credits</th><th>Studielevel</th><th>Status</th>	</tr>
+</thead>
+<tbody>
+<tr>
+<td style="color:blue;">IT3022</td>
+<td>Deltagene design</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>mandatory course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4250</td>
+<td>Avansert programvaredesign</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">IT3402</td>
+<td>Design av grafisk brukergrensesnitt</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4252</td>
+<td>Virksomhetsarkitektur oginnovasjon</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>selectable course</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="320160" class="semester">
+
+<div class="row">
+<h5 style="color:gray;padding-right:20px;">Høst </h5>
+<h5> Obligatoriske og valgbare emner - 3. semester</h5>
+</div>
+<table class="table table-striped table-responsive mb-8 mt-0">
+	<thead>
+		<tr>
+<th>Code</th><th>Navn</th><th>Credits</th><th>Studielevel</th><th>Status</th>	</tr>
+</thead>
+<tbody>
+<tr>
+<td style="color:blue;">IT3402</td>
+<td>Design av grafisk brukergrensesnitt</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>mandatory course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4136</td>
+<td>Introduksjon til kunstig inteligens</td>
+<td>7.5</td>
+<td>3stlevel</td>
+<td>mandatory course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4257</td>
+<td>Digital tjenesteinnovasjon</td>
+<td>7.5</td>
+<td>3stlevel</td>
+<td>mandatory course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4215</td>
+<td>Anbefalingssystemer</td>
+<td>7.5</td>
+<td>3stlevel</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">IT3022</td>
+<td>Deltagene design</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>selectable course</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br/><hr/><br/><h2>Programvareutvikling</h2>
+<div>
+
+<div class="row">
+<h5 style="color:gray;padding-right:20px;">Høst </h5>
+<h5> Obligatoriske og valgbare emner - 1. semester</h5>
+</div>
+<table class="table table-striped table-responsive mb-8 mt-0">
+	<thead>
+		<tr>
+<th>Code</th><th>Navn</th><th>Credits</th><th>Studielevel</th><th>Status</th>	</tr>
+</thead>
+<tbody>
+<tr>
+<td style="color:blue;">TDT3150</td>
+<td>Informasjonssystemer</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>mandatory course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4250</td>
+<td>Avansert programvaredesign</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">IT3402</td>
+<td>Design av grafisk brukergrensesnitt</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT2992</td>
+<td>Infomasjonsgjennfinning</td>
+<td>7.5</td>
+<td>3stlevel</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4259</td>
+<td>Anvendt data sience</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>selectable course</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+
+<div class="row">
+<h5 style="color:gray;padding-right:20px;">Vår </h5>
+<h5> Obligatoriske og valgbare emner - 2. semester</h5>
+</div>
+<table class="table table-striped table-responsive mb-8 mt-0">
+	<thead>
+		<tr>
+<th>Code</th><th>Navn</th><th>Credits</th><th>Studielevel</th><th>Status</th>	</tr>
+</thead>
+<tbody>
+<tr>
+<td style="color:blue;">TDT4215</td>
+<td>Anbefalingssystemer</td>
+<td>7.5</td>
+<td>3stlevel</td>
+<td>mandatory course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT2992</td>
+<td>Infomasjonsgjennfinning</td>
+<td>7.5</td>
+<td>3stlevel</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT3150</td>
+<td>Informasjonssystemer</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">IT3402</td>
+<td>Design av grafisk brukergrensesnitt</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4117</td>
+<td>Informasjonsgenfinning</td>
+<td>7.5</td>
+<td>3stlevel</td>
+<td>selectable course</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>Databaser og søk</h2>
+<div>
+
+<div class="row">
+<h5 style="color:gray;padding-right:20px;">Høst </h5>
+<h5> Obligatoriske og valgbare emner - 1. semester</h5>
+</div>
+<table class="table table-striped table-responsive mb-8 mt-0">
+	<thead>
+		<tr>
+<th>Code</th><th>Navn</th><th>Credits</th><th>Studielevel</th><th>Status</th>	</tr>
+</thead>
+<tbody>
+<tr>
+<td style="color:blue;">TDT2992</td>
+<td>Infomasjonsgjennfinning</td>
+<td>7.5</td>
+<td>3stlevel</td>
+<td>mandatory course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4136</td>
+<td>Introduksjon til kunstig inteligens</td>
+<td>7.5</td>
+<td>3stlevel</td>
+<td>mandatory course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4200</td>
+<td>Parallelle beregninger</td>
+<td>7.5</td>
+<td>1stlevel</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4259</td>
+<td>Anvendt data sience</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">IT3402</td>
+<td>Design av grafisk brukergrensesnitt</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>selectable course</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br/><hr/><br/><script type="text/javascript">
+
+function checkYears(start, end, selected){
+	// parsing all the input to Integers.
+	let start_int = parseInt(start)
+	let end_int = parseInt(end)
+	let selected_int = parseInt(selected)
+	console.log("start " , start_int)
+	console.log("end ", end_int)
+	console.log("start and end stringz", start, end)
+	console.log("selected int :  ", selected)
+	if(end_int === 0){
+		console.log("inside end-int == 0")
+		if(selected_int >= start_int) return true;
+	}else{
+		console.log("endint is not 0")
+		if(selected_int >= start_int && selected_int < end_int) return true;
+	}
+	console.log("returning false! at ",start, end)
+	return false;
+	
+}
+
+function onClickyear(selected){
+	var divs = document.getElementsByClassName("semester");
+	// setting all semester to none, so they are removed. 
+	for (var i = 0; i < divs.length; i++) {
+		divs[i].style.display = 'none';
+	}
+	[120170, 220170, 120162017, 320160].forEach(id => {
+		console.log(id.toString())
+		
+		const start = id.toString().slice(1,5) // here we are fetching the start year. 
+		const end = id.toString().slice(5); // here we are fetching the end year
+		
+		// an example of this is 20202021 where the start year is 2020 and end is 2021
+		// OBS! the end year might not exist!
+		const is_accepted = checkYears(start, end, selected.value) // checked if the year selected is in this id.
+		
+		// if the id from the idlist is accepted then we will show this id/semester.
+		if(is_accepted) document.getElementById(id.toString()).style.display = 'block';
+		
+	})
+	
+	
+}
+
+</script>
+<h1 id=2020></h1>
+<div class="row" style="text-align:center;">
+<h1>Datateknologi 5-årig</h1>
+<h1> MTDT</h1>
+</div>
+<div class="row">
+<h4 style="padding-right:20px;">Kull  </h4>
+
+<div>
+<select class="custom-select float-right" id="yearSelection"" onchange="onClickyear(this)"><option value="2015">2015 </option>
+<option value="2016">2016 </option>
+<option value="2017">2017 </option>
+<option value="2018">2018 </option>
+<option value="2019">2019 </option>
+<option value="2020">2020 </option>
+</select>
+</div>
+</div>
+<div id="120150" class="semester">
+
+<div class="row">
+<h5 style="color:gray;padding-right:20px;">Høst </h5>
+<h5> Obligatoriske og valgbare emner - 1. semester</h5>
+</div>
+<table class="table table-striped table-responsive mb-8 mt-0">
+	<thead>
+		<tr>
+<th>Code</th><th>Navn</th><th>Credits</th><th>Studielevel</th><th>Status</th>	</tr>
+</thead>
+<tbody>
+<tr>
+<td style="color:blue;">TDT4200</td>
+<td>Parallelle beregninger</td>
+<td>7.5</td>
+<td>1stlevel</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4245</td>
+<td>Samhandlingsteknologi og sosiale medier</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4257</td>
+<td>Digital tjenesteinnovasjon</td>
+<td>7.5</td>
+<td>3stlevel</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4215</td>
+<td>Anbefalingssystemer</td>
+<td>7.5</td>
+<td>3stlevel</td>
+<td>selectable course</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="220150" class="semester">
+
+<div class="row">
+<h5 style="color:gray;padding-right:20px;">Vår </h5>
+<h5> Obligatoriske og valgbare emner - 2. semester</h5>
+</div>
+<table class="table table-striped table-responsive mb-8 mt-0">
+	<thead>
+		<tr>
+<th>Code</th><th>Navn</th><th>Credits</th><th>Studielevel</th><th>Status</th>	</tr>
+</thead>
+<tbody>
+<tr>
+<td style="color:blue;">IT3022</td>
+<td>Deltagene design</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>mandatory course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4237</td>
+<td>Programvaresikkerhet og personvern</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>mandatory course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4245</td>
+<td>Samhandlingsteknologi og sosiale medier</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>selectable course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4257</td>
+<td>Digital tjenesteinnovasjon</td>
+<td>7.5</td>
+<td>3stlevel</td>
+<td>selectable course</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="320150" class="semester">
+
+<div class="row">
+<h5 style="color:gray;padding-right:20px;">Høst </h5>
+<h5> Obligatoriske og valgbare emner - 3. semester</h5>
+</div>
+<table class="table table-striped table-responsive mb-8 mt-0">
+	<thead>
+		<tr>
+<th>Code</th><th>Navn</th><th>Credits</th><th>Studielevel</th><th>Status</th>	</tr>
+</thead>
+<tbody>
+<tr>
+<td style="color:blue;">TDT4252</td>
+<td>Virksomhetsarkitektur oginnovasjon</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>mandatory course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4259</td>
+<td>Anvendt data sience</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>mandatory course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4117</td>
+<td>Informasjonsgenfinning</td>
+<td>7.5</td>
+<td>3stlevel</td>
+<td>mandatory course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4136</td>
+<td>Introduksjon til kunstig inteligens</td>
+<td>7.5</td>
+<td>3stlevel</td>
+<td>mandatory course</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="420150" class="semester">
+
+<div class="row">
+<h5 style="color:gray;padding-right:20px;">Vår </h5>
+<h5> Obligatoriske og valgbare emner - 4. semester</h5>
+</div>
+<table class="table table-striped table-responsive mb-8 mt-0">
+	<thead>
+		<tr>
+<th>Code</th><th>Navn</th><th>Credits</th><th>Studielevel</th><th>Status</th>	</tr>
+</thead>
+<tbody>
+<tr>
+<td style="color:blue;">TDT2992</td>
+<td>Infomasjonsgjennfinning</td>
+<td>7.5</td>
+<td>3stlevel</td>
+<td>mandatory course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT4250</td>
+<td>Avansert programvaredesign</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>mandatory course</td>
+</tr>
+<tr>
+<td style="color:blue;">TDT3150</td>
+<td>Informasjonssystemer</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>mandatory course</td>
+</tr>
+<tr>
+<td style="color:blue;">IT3402</td>
+<td>Design av grafisk brukergrensesnitt</td>
+<td>7.5</td>
+<td>higher level</td>
+<td>mandatory course</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br/><hr/><br/></div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>
+<style type="text/css">
+* {
+	font-family: arial, sans-serif;
+}
+h1, h2, h3 {
+	margin-bottom: 20px;
+	margin-left : 20px;
+}
+</style>

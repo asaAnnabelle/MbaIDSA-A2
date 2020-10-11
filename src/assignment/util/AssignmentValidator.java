@@ -407,18 +407,20 @@ public class AssignmentValidator extends EObjectValidator {
 	 * @generated NOT
 	 */
 	public boolean validateSemester_NumberOfCreditsInASemesterMustBeValid(Semester semester, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		float totalCredits = 0;
-		float mandatoryCredits = 0;
-		float selectableCredits = 0;
-		for(int i=0; i <semester.getMandatoryCourse().size(); i++) {
+		float totalCredits = 0.0f;
+		float mandatoryCredits = 0.0f;
+		float selectableCredits = 0.0f;
+		
+		for(int i=0; i < semester.getMandatoryCourse().size(); i++) {
+			
 			mandatoryCredits += semester.getMandatoryCourse().get(i).getCredits();
 		}
-		for(int x=0; x <semester.getMandatoryCourse().size(); x++) {
+		for(int x=0; x <semester.getSelectableCourse().size(); x++) {
 			selectableCredits += semester.getSelectableCourse().get(x).getCredits();
 		}
 		totalCredits = mandatoryCredits + selectableCredits;
 		
-		if (totalCredits<30 | mandatoryCredits>30 ) {
+		if ((totalCredits<30) || (mandatoryCredits>30)) {
 			if (diagnostics != null) {
 				diagnostics.add
 					(createDiagnostic

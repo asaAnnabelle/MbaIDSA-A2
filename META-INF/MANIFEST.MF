@@ -7,10 +7,23 @@ Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8,
+ J2SE-1.5
 Export-Package: assignment,
  assignment.impl,
  assignment.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro,
+ org.eclipse.emf.ecore.xmi;bundle-version="2.16.0";visibility:=reexport,
+ org.eclipse.acceleo.query;bundle-version="7.0.0",
+ org.antlr.runtime;bundle-version="3.2.0",
+ org.emfjson.core;bundle-version="0.13.0",
+ org.emfjson.jackson;bundle-version="0.13.0",
+ com.fasterxml.jackson.core.jackson-annotations;bundle-version="2.9.1",
+ com.fasterxml.jackson.core.jackson-core;bundle-version="2.9.1",
+ com.fasterxml.jackson.core.jackson-databind;bundle-version="2.9.1"
 Bundle-ActivationPolicy: lazy

@@ -4,7 +4,8 @@
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>assignment.ecore</foreignModel>
-  <genPackages prefix="Assignment" disposableProviderFactory="true" ecorePackage="assignment.ecore#/">
+  <genPackages prefix="Assignment" resource="XMI" disposableProviderFactory="true"
+      ecorePackage="assignment.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="assignment.ecore#//Studylevel">
       <genEnumLiterals ecoreEnumLiteral="assignment.ecore#//Studylevel/firstlevel"/>
       <genEnumLiterals ecoreEnumLiteral="assignment.ecore#//Studylevel/secondlevel"/>
